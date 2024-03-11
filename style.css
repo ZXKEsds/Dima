@@ -1,0 +1,364 @@
+body{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    background-color: #f2f2f2;
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: inherit;
+}
+
+.navbar{
+    width: 100%;
+    height: 70px;
+    box-shadow: 0 4px 10px rgba(0,0,0, .1);
+    position: fixed; 
+    width: 100%; 
+    top: 0; 
+    z-index: 1000; 
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .container{
+   height: inherit; 
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.navbar-menu{
+    list-style: none;
+    padding-left: 0%;
+    margin-bottom: 0;
+
+}
+
+.navbar-menu li{
+    display: inline-block;
+}
+
+.navbar-menu li a{
+    display: inline-block;
+    color: black;
+    opacity: 0.6;
+    text-decoration: none;
+    padding: 10px;
+    transition: all .07s ease-in-out;
+}
+
+.navbar-menu li a:hover{
+opacity: 1;
+}
+
+.nawbar-wrap{
+  display: flex;
+    flex-flow: row nowrap;
+}
+
+.callback{
+    margin-left: 30px;
+    padding: 10px 30px;
+    background-color: coral;
+    border-radius: 100px;
+    color:white;
+    text-decoration: none;
+   transition: all .1s ease-in-out;
+   box-shadow: 0 4px 6px rgb(255, 117, 80, .2);
+}
+
+.callback:hover{
+    transform:scale(1.04);
+    color:white;
+    box-shadow: 0 9px 6px rgb(255, 127, 80, .2);
+}
+.navbar-brand{
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+    color: black;
+}
+
+.navbar-brand:hover{
+ color: coral;
+}
+
+.contentinfo{
+    font-size: 32px;
+    text-align: center;
+
+}
+
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.intro-text {
+    text-align: center;
+    margin-right: 20px;
+    font-size: 24px;
+}
+
+.image-container {
+    text-align: center;
+}
+
+.image-container img {
+    width: 500px;
+    height: auto; 
+    
+}
+
+/* Карточки товаров*/
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.h2{
+    text-align: center; 
+    margin-top: 50px;
+    font-size: 50px;
+}
+.services-title {
+    text-align: center;
+    margin-top: 50px; 
+}
+.services .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.services {
+    text-align: center; 
+}
+
+
+.services {
+    padding: 50px 0;
+    background-color: #f9f9f9; 
+}
+
+.service-card {
+    width: 300px;
+    margin: 0 auto 30px; 
+    background-color: #fff;
+    border-radius: 10px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    overflow: hidden; 
+}
+
+.service-card img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 10px; 
+    border-top-right-radius: 10px; 
+}
+
+.service-card h3 {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.service-card p {
+    margin: 10px 0; 
+    padding: 0 20px; 
+}
+
+.service-card button {
+    display: inline-block;
+    background-color: coral;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.service-card button:hover {
+    background-color: #ff7f50;
+}
+.service-card img{
+    width: 200px; 
+    height: auto;
+}
+
+
+/* окно */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    overflow: auto; 
+}
+
+.modal-content {
+    background-color: #fefefe; 
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+    max-width: 600px; 
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    position: relative; 
+}
+
+.close {
+    position: absolute;
+    top: 10px; 
+    right: 10px; 
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Стили для кнопок в окне */
+.modal-button {
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: coral;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px; 
+}
+
+/* Стили для кнопок в окне при наведении */
+.modal-button:hover {
+    background-color: #ff7f50;
+}
+
+
+/* Стили для элементов формы обратной связи */
+.modal-content input[type="text"],
+.modal-content input[type="tel"],
+.modal-content button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Стили для кнопки отправки формы */
+.modal-content button {
+    background-color: coral;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal-content button:hover {
+    background-color: #ff7f50;
+}
+
+
+/* Портфолио */
+.portfolio-title {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 50px;
+}
+
+.portfolio-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    grid-gap: 20px; 
+}
+
+.portfolio-item {
+    border: 1px solid #ccc; 
+    border-radius: 5px;
+    overflow: hidden; 
+}
+
+.portfolio-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease; 
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.1); 
+}
+
+
+/* О нас */
+.h1title{
+    text-align: center;
+    font-size: 40px;
+}
+.map-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; 
+    height: 450px;
+    padding-bottom: 20px;
+}
+.contact-info {
+    margin-bottom: 20px; 
+    font-size: 24px;
+}
+
+/* Подвал */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer-contact {
+    text-align: right;
+}
+
+
+
+/* приколы */
+.animate {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.animate.visible {
+    opacity: 1;
+}
+
+.animate.active {
+    opacity: 1;
+    transform: translateY(0);
+}
